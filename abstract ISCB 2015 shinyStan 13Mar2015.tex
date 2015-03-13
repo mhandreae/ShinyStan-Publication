@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NIH Grant Proposal for the Specific Aims and Research Plan Sections
+% LaTeX Template
+% Version 1.0 (21/10/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Erick Tatro (erickttr@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+% Michael ma2196@columbia.edu
+% with assistance from Jonah G.
+% Adapted from:
+% J. Hrabe (http://www.magalien.com/public/nih_grants_in_latex.html)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,notitlepage]{article}
+
+% A note on fonts: As of 2013, NIH allows Georgia, Arial, Helvetica, and Palatino Linotype. LaTeX doesn't have Georgia or Arial built in; you can try to come up with your own solution if you wish to use those fonts. Here, Palatino & Helvetica are available, leave the font you want to use uncommented while commenting out the other one.
+
+\usepackage[super]{natbib}
+\usepackage{palatino} % Palatino font
+%\usepackage{helvet} % Helvetica font
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+\usepackage[T1]{fontenc}
+\linespread{1.05} % A little extra line spread is better for the Palatino font
+\usepackage{hyperref} % to allow hyperlinks to websites on the internet
+\usepackage[hypcap]{caption} % to point to the top of the image
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{graphicx} % Required for including images
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{wrapfig} % Allows in-line images
+\usepackage[labelfont=footnotesize]{caption} % Make figure numbering in captions bold
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry} % Reduce the size of the margin
+\pagestyle{empty} % Remove page numbers
+
+\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
+
+  
+  % to reduce white space between PARAGRAPHS
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+
+  % additional parameters
+%\setlength{\headsep}{0pt}
+%\setlength{\topskip}{0pt}
+%\setlength{\topmargin}{0pt}
+%\setlength{\topsep}{0pt}
+%\setlength{\partopsep}{0pt}
+
+  % to reduce white space around figures
+% \setlength{\textfloatsep}{0pt plus 0pt minus 0pt}
+
+  % to reduce white space between SECTIONS
+\usepackage[compact]{titlesec}
+\titlespacing{\part}{0pt}{5pt}{4pt}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
+%\titlespacing{\subparagraph}{0pt}{*0}{*0}
+\titlespacing*{\subparagraph} {\parindent}{1ex plus 1ex minus .2ex}{0.5em}
+
+
+\begin{document}
+
+\section*{Conference:}
+
+Third Annual Conference of the International Society for Clinical Biostatistics, Utrecht Aug 22nd 2015. I will attend this conference, but maybe another (Bayesian) meeting might be more suitable?
+
+\href{http://www.iscb.info/ISCB2015.html}{Conference Website}
+
+\href{http://www.iscb2015.info/abstract-submission}{Call for Abstracts}
+
+
+
+\section*{Title:}
+
+Interactive graphical analysis, exploration and posterior predictive checking of multi-level hierarchical Bayesian models (140 characters max)
+\section*{Abstract}
+(1,750 characters max or 1,250 with one illustration) \textbf{One illustration (simple photograph/table/figure) may be uploaded for inclusion in the abstract. The maximum length of the abstract then becomes 1,250 characters, including spaces.}
+
+\section*{Background:}
+Exploratory and confirmatory data analyses complement each other in the comparison of data to implicit or explicit statistical models, but in practice can be cumbersome to realize and interpret in the face of complex hierarchical models and modern Markov chain Monte Carlo (MCMC) algorithms (e.g. Hamiltonian Monte Carlo). The availability of drastically increased computer power and advanced graphical software routines allows novel approaches to integrate exploratory and confirmatory analysis for complex hierarchical models.
+
+\section*{Materials and methods:}
+We developed ShinyStan, an open source software package for graphical exploratory and confirmatory analysis of Bayesian models implemented in Shiny, a softwarepackage for interactive web based visualization in the statistical software environment RStudio/R.  
+\section*{Results:}
+
+Computation of graphics and aggregate statistics for large MCMC data limited the responsiveness of our application to the user and we had to strike a fine balance between startup and responsive computation. 3D visualization of asymmetric distribution of prior and posterior statistics on the log scale against the log likelihood offered new insight into model misspecifications for example explaining slow model convergence and low effective sample size in Hamiltonian MCMC while offering practical indications on how to overcome these by non-centered parametrization.
+\section*{Conclusions:}
+3D graphical exploration of hierarchical models may provide novel means to detect model misspecification in hierarchical Bayesian inference and improve convergence diagnostics by detecting and demonstrating unexpected deviations from implicit model assumptions.
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\bibliography{K01_bibliography_24Feb15} % Use the NIHbibliography.bib file for the reference list; the file name cannot contain spaces
+\bibliographystyle{nihunsrt} % Use the custom nihunsrt bibliography style included with the template
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
