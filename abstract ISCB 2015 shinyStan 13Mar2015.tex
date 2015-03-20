@@ -90,14 +90,15 @@ Posterior exploration and predictive checking for Bayesian hierarchical models v
 
 \section*{Background:}
 Exploratory and confirmatory data analyses complement each other in the comparison of data to implicit or explicit statistical models, but in practice can be cumbersome to realize and interpret in the face of complex hierarchical models and modern Markov chain Monte Carlo (MCMC) algorithms (e.g. Hamiltonian Monte Carlo). The availability of drastically increased computer power and advanced graphical software routines allows novel approaches to integrate exploratory and confirmatory analysis for complex hierarchical models.
-
+  
 \section*{Materials and methods:}
-We developed ShinyStan, an open source software package for graphical exploratory and confirmatory analysis of Bayesian models implemented in Shiny, a softwarepackage for interactive web based visualization in the statistical software environment RStudio/R.  
+We developed shinyStan, an open source software package for graphical exploratory and confirmatory analysis of Bayesian models. shinyStan uses the Shiny web application framework and is coded in R, CSS, HTML, and JavaScript.  
 \section*{Results:}
 
-Computation of graphics and aggregate statistics for large MCMC data limited the responsiveness of our application to the user and we had to strike a fine balance between startup and responsive computation. 3D visualization of asymmetric distribution of prior and posterior statistics on the log scale against the log likelihood offered new insight into model misspecifications for example explaining slow model convergence and low effective sample size in Hamiltonian MCMC while offering practical indications on how to overcome these by non-centered parametrization.
+Computation of graphics and aggregate statistics for large MCMC data limited the responsiveness of our application to the user and we worked to find the best possible balance between startup and responsive computation. 3D visualization of asymmetric distributions of prior and posterior statistics on the log scale against the log-likelihood offer new insight into model misspecifications. For instance, certain surface patterns shown by these 3D plots motivates the use of non-centered parametrizations to drastically improve the ratio of effective sample size to total posterior draws in Hamiltonian MCMC.
 \section*{Conclusions:}
-3D graphical exploration of hierarchical models may provide novel means to detect model misspecification in hierarchical Bayesian inference and improve convergence diagnostics by detecting and demonstrating unexpected deviations from implicit model assumptions.
+
+Interactive and 3D graphical exploration of hierarchical models may provide novel means to detect model misspecification in the context of hierarchical Bayesian inference. shinyStan provides new tools detecting and demonstrating unexpected deviations from implicit model assumptions as well as an interface for general posterior analysis.
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
